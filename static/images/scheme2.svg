@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500">
+<rect width="1600" height="500" fill="#fff"/>
+<defs><marker id="a" markerWidth="12" markerHeight="12" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7c8790"/></marker></defs>
+<text x="800" y="48" font-family="Arial" font-size="30" font-weight="700" text-anchor="middle" fill="#30363b">Continuous Deformable Anatomy Representation</text>
+<g font-family="Arial">
+  <rect x="85" y="105" width="400" height="300" rx="20" fill="#f2f7fb" stroke="#9eb7cc" stroke-width="3"/>
+  <text x="285" y="145" font-size="22" font-weight="700" text-anchor="middle" fill="#405f78">Learnable Cubic B-spline Centerline</text>
+  <path d="M130 285 C180 180 280 180 335 255 C380 315 420 298 455 220" fill="none" stroke="#2f6f91" stroke-width="9" stroke-linecap="round"/>
+  <g fill="#fff" stroke="#2f6f91" stroke-width="3"><circle cx="130" cy="285" r="10"/><circle cx="205" cy="205" r="10"/><circle cx="285" cy="205" r="10"/><circle cx="355" cy="275" r="10"/><circle cx="455" cy="220" r="10"/></g>
+  <text x="285" y="360" font-size="17" text-anchor="middle" fill="#6b7780">Continuous axial coordinates, tangent and curvature</text>
+
+  <rect x="595" y="105" width="410" height="300" rx="20" fill="#f9f4ec" stroke="#d4b987" stroke-width="3"/>
+  <text x="800" y="145" font-size="22" font-weight="700" text-anchor="middle" fill="#745d30">Anatomy-attached Deformation Graph</text>
+  <g stroke="#b48a63" stroke-width="4"><line x1="660" y1="290" x2="730" y2="220"/><line x1="730" y1="220" x2="810" y2="260"/><line x1="810" y1="260" x2="875" y2="205"/><line x1="875" y1="205" x2="945" y2="285"/><line x1="730" y1="220" x2="875" y2="205"/><line x1="810" y1="260" x2="945" y2="285"/></g>
+  <g fill="#c9966c" stroke="#fff" stroke-width="3"><circle cx="660" cy="290" r="16"/><circle cx="730" cy="220" r="16"/><circle cx="810" cy="260" r="16"/><circle cx="875" cy="205" r="16"/><circle cx="945" cy="285" r="16"/></g>
+  <text x="800" y="360" font-size="17" text-anchor="middle" fill="#766c5d">Distributed bending and local non-rigid motion</text>
+
+  <rect x="1110" y="105" width="405" height="300" rx="20" fill="#eef8f1" stroke="#9fc09f" stroke-width="3"/>
+  <text x="1312" y="145" font-size="22" font-weight="700" text-anchor="middle" fill="#456a49">Canonical-to-Posed Correspondence</text>
+  <path d="M1160 280 C1225 210 1330 205 1395 260 C1440 295 1472 280 1490 240" fill="none" stroke="#769a78" stroke-width="8"/>
+  <path d="M1170 330 C1220 270 1320 300 1380 335 C1430 365 1470 345 1490 310" fill="none" stroke="#7c8fb1" stroke-width="6" stroke-dasharray="10 8"/>
+  <g stroke="#9aa4ad" stroke-width="2"><line x1="1230" y1="215" x2="1225" y2="283"/><line x1="1320" y1="215" x2="1322" y2="300"/><line x1="1410" y1="267" x2="1410" y2="348"/></g>
+  <text x="1312" y="370" font-size="17" text-anchor="middle" fill="#66736b">Dense structural scaffold for Gaussian reconstruction</text>
+
+  <line x1="485" y1="255" x2="575" y2="255" stroke="#7c8790" stroke-width="4" marker-end="url(#a)"/>
+  <line x1="1005" y1="255" x2="1090" y2="255" stroke="#7c8790" stroke-width="4" marker-end="url(#a)"/>
+</g>
+</svg>

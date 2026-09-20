@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="AquaMGS: Structure Guided Gaussian Splatting for Monocular Reconstruction of Deformable Aquatic Organisms">
+  <meta name="keywords" content="AquaMGS, Gaussian Splatting, Monocular 3D Reconstruction, Deformable Aquatic Organisms, Fish 3D Reconstruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AquaMGS</title>
+
+  <link rel="icon" href="./static/images/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Structure Guided Gaussian Splatting for Monocular Reconstruction of Deformable Aquatic Organisms</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="#">Xuanwei Xing</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Mengzhen Xu</a><sup>1*</sup>,</span>
+            <span class="author-block"><a href="#">Yuan Xue</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Yongxian Zhang</a><sup>2</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>State Key Laboratory of Hydroscience and Engineering, Tsinghua University</span><br>
+            <span class="author-block"><sup>2</sup>State Key Laboratory of Spatial Datum, Faculty of Geographical Science and Engineering, Henan University</span><br>
+            <span class="author-block"><sup>*</sup>Corresponding author</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark placeholder-link" data-kind="paper">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark placeholder-link" data-kind="code">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-quote-right"></i></span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Three-dimensional reconstruction of aquatic organisms supports morphological analysis, behavioral interpretation, and digital ecological modeling. Deformable organisms such as fish exhibit continuous body bending, undulation, and substantial pose variation, while monocular underwater observations provide incomplete geometric evidence under occlusion, turbidity, and uneven illumination. We propose <b>AquaMGS</b>, a monocular 3D reconstruction and novel-view synthesis framework that integrates structural priors with an explicit Gaussian representation field. Fish-centric 3D query lifting maps RGB appearance, silhouette, relative-depth, and confidence cues into a body-normalized spatial representation. A continuous deformable anatomy module then couples a learnable cubic B-spline centerline with an anatomy-attached deformation graph to model longitudinal deformation and canonical-to-posed correspondence. The recovered anatomy subsequently guides Gaussian optimization through confidence-aware primitive allocation, dual-space depth projection, layered completion, and deformability-preserving pruning. Experiments on the FURA dataset and independent cross-dataset evaluations show stable geometry recovery under pose variation, partial occlusion, and small-scale observations. On FURA, AquaMGS achieves an NCD of 0.029, PSNR of 20.73 dB, and SSIM of 0.814, while maintaining coherent anatomical structure across novel viewpoints.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <table class="summary-table" width="100%">
+      <tr>
+        <td width="40%" class="summary-text">
+          <p><b>In summary, this work makes the following contributions:</b></p>
+          <ul>
+            <li>A fish-centric 3D query lifting and structured completion strategy integrates monocular RGB, silhouette, relative depth, uncertainty, and anatomical priors in a body-normalized 3D representation.</li>
+            <li>A continuous deformable anatomy model couples a learnable cubic B-spline centerline with an anatomy-attached deformation graph to represent distributed axial bending and local shape variation.</li>
+            <li>An anatomy-aware Gaussian formulation combines confidence-guided adaptive densification, dual-space depth projection, layered completion, and deformability-preserving pruning for coherent geometry and novel-view synthesis.</li>
+          </ul>
+        </td>
+        <td width="7%"></td>
+        <td width="53%">
+          <div class="item item-balls lead-video-wrap">
+            <video id="fish_demo" autoplay controls muted loop playsinline width="100%" poster="./static/images/fish_demo_v2_poster.jpg">
+              <source src="./static/videos/fish_demo_v2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <p class="demo-note">The lead panel above presents the primary fish reconstruction demo. A second complementary video is provided below to show an additional visualization sequence.</p>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Demo Videos</h2>
+      <div class="columns is-variable is-5 is-multiline">
+        <div class="column is-6-desktop is-12-tablet">
+          <div class="video-card-wrap">
+            <video autoplay controls muted loop playsinline width="100%" poster="./static/images/fish_demo_v2_poster.jpg">
+              <source src="./static/videos/fish_demo_v2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="figure-text has-text-centered">Demo 1. Primary fish reconstruction showcase video.</p>
+        </div>
+        <div class="column is-6-desktop is-12-tablet">
+          <div class="video-card-wrap">
+            <video autoplay controls muted loop playsinline width="100%" poster="./static/images/fish_sp_poster.jpg">
+              <source src="./static/videos/fish_sp.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="figure-text has-text-centered">Demo 2. Additional fish visualization sequence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method Overview</h2>
+    <p class="demo-note">The following panels are the original method figures from the manuscript. Transparent regions have been displayed on a white background for webpage presentation.</p>
+    <br>
+
+    <div class="paper-figure-card">
+      <img src="./static/images/paper_fig1.png" alt="Confidence-guided anatomy-adaptive densification" width="100%">
+    </div>
+    <p class="figure-text">Confidence-guided anatomy-adaptive densification projects Gaussian primitives to image and volume space, measures observation confidence, local curvature, and geometric residual, and applies adaptive cloning or splitting in a local anatomical frame.</p>
+    <br>
+
+    <div class="paper-figure-card">
+      <img src="./static/images/paper_fig2.png" alt="Anatomy-guided completion" width="100%">
+    </div>
+    <p class="figure-text">Anatomy-guided completion partitions Gaussian support into visible and degraded regions, then propagates support along anatomical directions to recover missing structures while preserving deformability.</p>
+    <br>
+
+    <div class="paper-figure-card">
+      <img src="./static/images/paper_fig3.png" alt="Dual-space depth projection" width="100%">
+    </div>
+    <p class="figure-text">Dual-space depth projection decouples canonical metric geometry from view-dependent appearance by enforcing depth consistency in both canonical and posed spaces using a shared depth plane.</p>
+    <br>
+
+    <div class="paper-figure-card">
+      <img src="./static/images/paper_fig4.png" alt="AquaMGS full pipeline" width="100%">
+    </div>
+    <p class="figure-text">The complete AquaMGS pipeline integrates input preparation, anatomy-aware feature encoding, Gaussian-field optimization, differentiable rendering, and the key innovation modules into an end-to-end monocular reconstruction framework.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title">Conclusion</h2>
+    <p class="has-text-justified">
+      AquaMGS connects monocular 3D query reasoning, continuous anatomical representation, and anatomy-aware Gaussian Splatting for deformable aquatic organisms. Anatomical coordinates and deformation graphs maintain correspondence between canonical and posed geometry, while confidence, geometric supervision, completion, and pruning regulate the Gaussian field under incomplete observations. The resulting representation supports fish-centered geometry recovery and novel-view synthesis across substantial changes in pose, curvature, visibility, and viewpoint.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <h3 class="title">AquaMGS</h3>
+<pre><code>@article{xing2026aquamgs,
+  author = {Xuanwei Xing and Mengzhen Xu and Yuan Xue and Yongxian Zhang},
+  title  = {Structure Guided Gaussian Splatting for Monocular Reconstruction of Deformable Aquatic Organisms},
+  year   = {2026},
+  note   = {Manuscript}
+}</code></pre>
+
+    <h3 class="title">3D Gaussian Splatting</h3>
+<pre><code>@article{kerbl2023gaussians,
+  author  = {Kerbl, Bernhard and Kopanas, Georgios and Leimk{"u}hler, Thomas and Drettakis, George},
+  title   = {3D Gaussian Splatting for Real-Time Radiance Field Rendering},
+  journal = {ACM Transactions on Graphics},
+  volume  = {42},
+  number  = {4},
+  year    = {2023}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer site-footer">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p class="has-text-centered">
+          AquaMGS project page — Structure Guided Gaussian Splatting for Monocular Reconstruction of Deformable Aquatic Organisms.
+        </p>
+        <p class="has-text-centered small-footer">AquaMGS project-page · GitHub Pages ready</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
